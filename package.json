@@ -13,6 +13,11 @@
   "license": "ISC",
   "dependencies": {
     "react": "*",
-    "react-dom": "*"
+    "react-dom": "*",
+    "mobx": "^2.6.0",
+    "mobx-react": "^3.5.8"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-decorators-legacy": "^1.3.4"
   }
 }

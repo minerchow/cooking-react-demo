@@ -15,6 +15,7 @@ class Header extends Component {
         return <div>
             头部
             {this.props.title}
+            提交的内容：{this.props.store.decorated}
         </div>;
     }
 };

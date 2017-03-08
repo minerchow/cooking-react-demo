@@ -1,4 +1,5 @@
 {
   "presets": ["es2015", "stage-0", "react"],
-  "comments": false
+  "comments": false,
+   "plugins": ["transform-decorators-legacy"]
 }
