@@ -8,6 +8,7 @@ class TodoInput extends Component {
         const title = e.target.value;
         this.props.changeTitle(title);
     }
+    
     submitClick(e){
         let value = this.refs.inputTxt.value;
         this.props.store.txt = value;

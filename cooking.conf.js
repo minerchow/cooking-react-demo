@@ -4,10 +4,22 @@ var path = require('path');
 cooking.set({
   entry: {
     app: './src/app.js',
+    note:'./src/noteApp.js',
     vendor: ['react', 'react-dom']
   },
   dist: './dist',
-  template: 'src/index.tpl',
+  template:  [
+    {
+     filename: 'index.html',
+      template: './src/index.tpl',
+      chunks: ['vendor','app']
+    },
+    {
+     filename: 'note.html',
+      template: './src/note.tpl',
+      chunks: ['vendor','note']
+    }
+  ],
 
   // development
   devServer: {
