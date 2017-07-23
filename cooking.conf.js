@@ -5,6 +5,7 @@ cooking.set({
   entry: {
     app: './src/app.js',
     note:'./src/noteApp.js',
+    testapp:"./src/testApp.js",
     vendor: ['react', 'react-dom']
   },
   dist: './dist',
@@ -15,9 +16,14 @@ cooking.set({
       chunks: ['vendor','app']
     },
     {
-     filename: 'note.html',
+      filename: 'note.html',
       template: './src/note.tpl',
       chunks: ['vendor','note']
+    },
+    {
+      filename: 'testApp.html',
+      template: './src/testApp.tpl',
+      chunks: ['vendor','testapp']
     }
   ],
 
@@ -30,7 +36,11 @@ cooking.set({
   // production
   clean: true,
   hash: true,
-  chunk: 'vendor',
+  chunk: [{
+     name: 'vendor',
+     minChunks: Infinity,
+     chunks: ['vendor','app','note','testapp']
+  }],
   publicPath: '/dist/',
   assetsPath: 'static',
   sourceMap: true,
