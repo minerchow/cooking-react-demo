@@ -36,7 +36,11 @@ cooking.set({
   // production
   clean: true,
   hash: true,
-  chunk: 'vendor',
+  chunk: [{
+     name: 'vendor',
+     minChunks: Infinity,
+     chunks: ['vendor','app','note','testapp']
+  }],
   publicPath: '/dist/',
   assetsPath: 'static',
   sourceMap: true,
