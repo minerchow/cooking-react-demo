@@ -5,6 +5,7 @@ cooking.set({
   entry: {
     app: './src/app.js',
     note:'./src/noteApp.js',
+    countApp:"./src/countApp.js",
     vendor: ['react', 'react-dom']
   },
   dist: './dist',
@@ -15,9 +16,14 @@ cooking.set({
       chunks: ['vendor','app']
     },
     {
-     filename: 'note.html',
+      filename: 'note.html',
       template: './src/note.tpl',
       chunks: ['vendor','note']
+    },
+    {
+      filename: 'count.html',
+      template: './src/count.tpl',
+      chunks: ['vendor','countApp']
     }
   ],
 
