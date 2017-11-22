@@ -9,7 +9,7 @@ class Display extends Component{
 
     render(){
         return <div>
-            {this.props.store.displayResult}
+           <div>  {this.props.countstore.displayResult} </div>
         </div>
     }
 }

@@ -6,13 +6,13 @@ class Count extends Component{
     }
     add = function(){
         setTimeout(()=>{
-            this.props.store.num++;
+            this.props.countstore.num++;
         },300)
         
         
     }
     min = function(){
-        this.props.store.num--;
+        this.props.countstore.num--;
     }
     render(){
         return <div>
