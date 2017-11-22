@@ -4,19 +4,19 @@ class Count extends Component{
     constructor(props){
         super(props);
     }
-    add = function(){
-        setTimeout(()=>{
-            this.props.countstore.num++;
-        },300)
+    // add = function(){
+    //     setTimeout(()=>{
+    //         this.props.countstore.num++;
+    //     },300)
         
         
-    }
-    min = function(){
-        this.props.countstore.num--;
-    }
+    // }
+    // min = function(){
+    //     this.props.countstore.num--;
+    // }
     render(){
         return <div>
-            <button onClick={this.add.bind(this)}>+1</button><button onClick={this.min.bind(this)}>-1</button>
+            <button onClick={this.props.countstore.add.bind(this)}>+1</button><button onClick={this.props.countstore.min.bind(this)}>-1</button>
         </div>
     }
 }
