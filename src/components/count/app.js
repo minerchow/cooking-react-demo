@@ -11,8 +11,10 @@ class Countapp extends Component{
 
     render(){
         return <div>
+            
             <Count store={CountStores}/>
             <Display store={CountStores}/>
+            
         </div>
     }
 }

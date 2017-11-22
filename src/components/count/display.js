@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import {observer} from 'mobx-react';
+@observer
 class Display extends Component{
     constructor(props){
         super(props);
@@ -7,7 +9,7 @@ class Display extends Component{
 
     render(){
         return <div>
-            {this.props.store.display}
+            {this.props.store.displayResult}
         </div>
     }
 }
