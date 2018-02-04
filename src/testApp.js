@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { render } from 'react-dom';
 //import {BrowserRouter,Route,Link} from 'react-router-dom';
 import AppComponent from "./components/testApp/app";
+
 //import Hello from "./components/testApp/hello";
 // import HelloComponent from './components/testApp/hello';
 import { Router, Route, hashHistory } from 'react-router'
@@ -10,7 +11,13 @@ import { Router, Route, hashHistory } from 'react-router'
 
 render((
   <Router history={hashHistory}>
-    <Route path="/" component={AppComponent}/>
+    <Route path="/" component={AppComponent}>
+      <Route path="/forms/:id" getComponent={(location, callback) => {
+                System.import('./components/testApp/form').then(component => {
+                    callback(null, component.default || component)
+                })
+            }} />
+    </Route> 
     <Route path="/hello" getComponent={(location, callback) => {
                 System.import('./components/testApp/hello').then(component => {
                     callback(null, component.default || component)
