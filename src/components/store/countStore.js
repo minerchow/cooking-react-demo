@@ -1,13 +1,17 @@
-import { observable,action, computed } from 'mobx';
+import { observable, action, computed, runInAction } from 'mobx';
 class CountStore{
     @observable num = 0;
     @action
     add(obj){
-        console.log(obj)
-        setTimeout(()=>{
-            this.props.countstore.num++;
-        },300)    
         
+        setTimeout(()=>{
+            runInAction(()=>{
+                console.log(this.props.countstore.num)
+                this.props.countstore.num--;
+            })
+           
+        },300)    
+     
     }
     @action
     min(){
