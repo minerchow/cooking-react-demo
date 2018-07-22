@@ -19,7 +19,8 @@ class Display extends Component{
                    )
                })} 
            </ul>
-           <div>{this.props.countstore.person.name} {this.props.countstore.person.age}</div>
+           <div>{this.props.countstore.person.name}</div>
+           <div>{this.props.countstore.person.age}</div>
         </div>
     }
 }

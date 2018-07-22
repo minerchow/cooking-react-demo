@@ -41,7 +41,10 @@ class CountStore{
       // this.props.countstore.arr.push('b');
       
     }
-  
+    @action
+    changeAge(){
+        extendObservable(this.props.countstore,{person:{age:18}})
+    }
     @computed get displayResult(){
         return this.num;
     }
